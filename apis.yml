@@ -1,39 +1,41 @@
 aid: 2020-police-brutality
 url: >-
-  https://raw.githubusercontent.com/api-search/2020-police-brutality/refs/heads/main/apis.yml
-apis:
-  - aid: 2020-police-brutality:2020-police-brutality
-    name: 2020 Police Brutality
-    tags:
-      - API
-    humanURL: ' https://github.com/2020PB/police-brutality/tree/data_build'
-    properties:
-      - url: ' https://github.com/2020PB/police-brutality/tree/data_build'
-        type: Documentation
-    description: >-
-      This repository exists to accumulate and contextualize evidence of police
-      brutality during the 2020 George Floyd protests.Our goal in doing this is
-      to assist journalists, politicians, prosecutors, activists and concerned
-      individuals who can use the evidence accumulated here for political
-      campaigns, news reporting, public education and prosecution of criminal
-      police officers. 
+  https://raw.githubusercontent.com/api-evangelist/2020-police-brutality/refs/heads/main/apis.yml
 name: 2020 Police Brutality
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Policing
   - Brutality
-type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-access: 3rd-Party
-created: '2024-11-13'
-modified: '2024-12-02'
-position: Consumer
+  - Public Data
 description: >-
   This repository exists to accumulate and contextualize evidence of police
-  brutality during the 2020 George Floyd protests.Our goal in doing this is to
-  assist journalists, politicians, prosecutors, activists and concerned
-  individuals who can use the evidence accumulated here for political campaigns,
-  news reporting, public education and prosecution of criminal police officers. 
+  brutality during the 2020 George Floyd protests. The goal is to assist
+  journalists, politicians, prosecutors, activists and concerned individuals
+  who can use the evidence accumulated here for political campaigns, news
+  reporting, public education and prosecution of criminal police officers.
+created: '2024-11-13'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: 2020-police-brutality:2020-police-brutality
+    name: 2020 Police Brutality API
+    tags:
+      - Policing
+      - Brutality
+    humanURL: https://github.com/2020PB/police-brutality/tree/data_build
+    properties:
+      - url: https://github.com/2020PB/police-brutality/tree/data_build
+        type: Documentation
+    description: >-
+      This repository exists to accumulate and contextualize evidence of police
+      brutality during the 2020 George Floyd protests. The goal is to assist
+      journalists, politicians, prosecutors, activists and concerned individuals
+      who can use the evidence accumulated here for political campaigns, news
+      reporting, public education and prosecution of criminal police officers.
+common:
+  - type: GitHub Organization
+    url: https://github.com/2020PB
 maintainers:
   - FN: Kin Lane
-    email: info@apievangelist.com
-specificationVersion: '0.19'
+    email: kin@apievangelist.com
