@@ -5,8 +5,8 @@ name: 2020 Police Brutality
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Policing
   - Brutality
+  - Policing
   - Public Data
 description: >-
   This repository exists to accumulate and contextualize evidence of police
@@ -21,8 +21,8 @@ apis:
   - aid: 2020-police-brutality:2020-police-brutality
     name: 2020 Police Brutality API
     tags:
-      - Policing
       - Brutality
+      - Policing
     humanURL: https://github.com/2020PB/police-brutality/tree/data_build
     properties:
       - url: https://github.com/2020PB/police-brutality/tree/data_build
