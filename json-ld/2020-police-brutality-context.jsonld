@@ -1,0 +1,60 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "pb2020": "https://2020pb.github.io/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Incident": "pb2020:Incident",
+    "IncidentCollection": "pb2020:IncidentCollection",
+    "city": {
+      "@id": "pb2020:city",
+      "@type": "xsd:string"
+    },
+    "data": {
+      "@id": "pb2020:data",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "date": "schema:dateCreated",
+    "dateText": {
+      "@id": "pb2020:date_text",
+      "@type": "xsd:string"
+    },
+    "description": "schema:description",
+    "editAt": {
+      "@id": "pb2020:edit_at",
+      "@type": "@id"
+    },
+    "geolocation": {
+      "@id": "pb2020:geolocation",
+      "@type": "xsd:string"
+    },
+    "help": {
+      "@id": "pb2020:help",
+      "@type": "@id"
+    },
+    "id": {
+      "@id": "pb2020:id",
+      "@type": "xsd:string"
+    },
+    "links": {
+      "@id": "pb2020:links",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "name": "schema:name",
+    "state": {
+      "@id": "pb2020:state",
+      "@type": "xsd:string"
+    },
+    "tags": {
+      "@id": "pb2020:tags",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "updatedAt": {
+      "@id": "pb2020:updated_at",
+      "@type": "xsd:dateTime"
+    }
+  }
+}

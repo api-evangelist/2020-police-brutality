@@ -1,0 +1,130 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: 2020 Police Brutality
+  description: >-
+    Taxonomy of the 2020 Police Brutality data API, mapping incident data
+    dimensions (locations, tags, dates) and capability dimensions (workflows,
+    personas) for journalists, researchers, and advocates.
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - name: 2020 Police Brutality API
+      namespace: 2020-police-brutality
+      version: "2.0"
+      baseUrl: https://raw.githubusercontent.com/2020PB/police-brutality/data_build
+      status: active
+
+  resources:
+    - name: incidents
+      description: Documented police brutality incidents from 2020 George Floyd protests
+      api: 2020-police-brutality
+      actions: [list]
+
+  actions:
+    - name: list
+      http_method: GET
+      pattern: read
+
+  schemas:
+    core:
+      - name: Incident
+        description: A documented police brutality incident
+      - name: IncidentCollection
+        description: Collection of incidents with metadata
+
+  parameters:
+    filters:
+      - name: state
+        description: Filter incidents by US state
+      - name: city
+        description: Filter incidents by city
+      - name: tags
+        description: Filter incidents by incident type tags
+      - name: date
+        description: Filter incidents by date
+
+  enums:
+    incident_tags:
+      - foam-bullet
+      - tear-gas
+      - pepper-spray
+      - protester
+      - journalist
+      - bystander
+      - rubber-bullet
+      - baton
+      - arrest
+      - vehicle
+
+capability:
+  workflows:
+    - name: 2020 Police Brutality Incident Research
+      file: capabilities/2020-police-brutality-incident-research.yaml
+      description: Research workflow for journalists, prosecutors, and activists
+      apis:
+        - 2020-police-brutality
+      tools: 3
+      personas:
+        - Journalist
+        - Researcher
+        - Legal Professional
+        - Activist
+
+  personas:
+    - id: journalist
+      name: Journalist
+      description: Investigates and reports on documented police brutality incidents
+      workflows:
+        - 2020 Police Brutality Incident Research
+    - id: researcher
+      name: Researcher
+      description: Conducts academic or policy research on police use of force patterns
+      workflows:
+        - 2020 Police Brutality Incident Research
+    - id: legal-professional
+      name: Legal Professional
+      description: Uses incident documentation for prosecution or civil litigation
+      workflows:
+        - 2020 Police Brutality Incident Research
+    - id: activist
+      name: Activist
+      description: Uses data for advocacy, public education, and political campaigns
+      workflows:
+        - 2020 Police Brutality Incident Research
+
+  domains:
+    - name: Incident Documentation
+      description: Documented evidence of police brutality during 2020 protests
+      resources: [incidents]
+
+  namespaces:
+    consumed:
+      - name: 2020-police-brutality
+        baseUri: https://raw.githubusercontent.com/2020PB/police-brutality/data_build
+    rest:
+      - name: police-brutality-research-api
+        port: 8080
+    mcp:
+      - name: police-brutality-research-mcp
+        port: 9090
+        transport: http
+
+crossReference:
+  - resource: incidents
+    operations:
+      - method: GET
+        path: /all-locations.json
+      - method: GET
+        path: /all-locations-v2.json
+      - method: GET
+        path: /all-locations.csv
+    workflows:
+      - 2020 Police Brutality Incident Research
+    personas:
+      - Journalist
+      - Researcher
+      - Legal Professional
+      - Activist

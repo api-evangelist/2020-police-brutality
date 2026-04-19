@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/2020-police-brutality/refs/heads/main/json-schema/2020-police-brutality-incident-schema.json",
+  "title": "Incident",
+  "description": "A documented police brutality incident from the 2020 George Floyd protests",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the incident (format: state-city-number)",
+      "example": "nm-albuquerque-1"
+    },
+    "name": {
+      "type": "string",
+      "description": "Brief title or summary of the incident",
+      "example": "Student journalist struck by foam bullet"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of what occurred during the incident",
+      "example": "A student journalist was struck by a foam bullet while covering protests near downtown."
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the incident occurred (ISO 8601 format)",
+      "example": "2020-06-01"
+    },
+    "date_text": {
+      "type": "string",
+      "description": "Human-readable date description",
+      "example": "June 1st"
+    },
+    "state": {
+      "type": "string",
+      "description": "US state abbreviation where the incident occurred",
+      "example": "NM"
+    },
+    "city": {
+      "type": "string",
+      "description": "City where the incident occurred",
+      "example": "Albuquerque"
+    },
+    "geolocation": {
+      "type": "string",
+      "description": "Latitude and longitude coordinates of the incident location",
+      "example": "35.0844,-106.6504"
+    },
+    "tags": {
+      "type": "array",
+      "description": "Categorical tags describing the type of incident or force used",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "foam-bullet",
+        "journalist",
+        "protester"
+      ]
+    },
+    "links": {
+      "type": "array",
+      "description": "Source URLs documenting or referencing the incident",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "example": [
+        "https://example.com/news-article",
+        "https://twitter.com/example/status/123456"
+      ]
+    },
+    "edit_at": {
+      "type": "string",
+      "format": "uri",
+      "description": "Direct link to edit this incident record on GitHub",
+      "example": "https://github.com/2020PB/police-brutality/edit/main/reports/New%20Mexico.md"
+    }
+  }
+}

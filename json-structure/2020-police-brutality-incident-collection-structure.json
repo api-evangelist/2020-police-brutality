@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/2020-police-brutality/refs/heads/main/json-structure/2020-police-brutality-incident-collection-structure.json",
+  "name": "IncidentCollection",
+  "description": "Collection of police brutality incidents with metadata",
+  "type": "object",
+  "properties": {
+    "edit_at": {
+      "type": "uri",
+      "description": "URL to the GitHub repository for editing/contributing",
+      "example": "https://github.com/2020PB/police-brutality"
+    },
+    "help": {
+      "type": "uri",
+      "description": "URL to report issues or get help",
+      "example": "https://github.com/2020PB/police-brutality/issues"
+    },
+    "updated_at": {
+      "type": "datetime",
+      "description": "Timestamp of the last data update",
+      "example": "2024-08-20T16:17:02Z"
+    },
+    "data": {
+      "type": "array",
+      "description": "Array of incident records",
+      "items": {
+        "$ref": "#/components/schemas/Incident"
+      }
+    }
+  }
+}

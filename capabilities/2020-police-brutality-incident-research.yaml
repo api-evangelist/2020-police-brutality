@@ -1,0 +1,94 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: 2020 Police Brutality Incident Research
+  description: >-
+    Workflow for accessing and analyzing documented police brutality incidents
+    from the 2020 George Floyd protests. Designed for journalists, researchers,
+    prosecutors, and activists who need programmatic access to incident data
+    for reporting, legal proceedings, and advocacy work.
+  tags:
+    - Public Data
+    - Policing
+    - Civil Rights
+    - Journalism
+    - Research
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+capability:
+  consumes:
+    - import: 2020-police-brutality
+      location: ./shared/2020-police-brutality.yaml
+
+  exposes:
+    - type: rest
+      port: 8080
+      namespace: police-brutality-research-api
+      description: "REST API for accessing 2020 police brutality incident data."
+      resources:
+        - path: /v1/incidents
+          name: incidents
+          description: "All documented police brutality incidents from 2020 protests."
+          operations:
+            - method: GET
+              name: list-incidents
+              description: "List all documented police brutality incidents."
+              call: "2020-police-brutality.get-all-incidents"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/incidents/csv
+          name: incidents-csv
+          description: "All incidents in CSV format for data analysis."
+          operations:
+            - method: GET
+              name: export-incidents-csv
+              description: "Export all incidents as CSV for spreadsheet and data analysis."
+              call: "2020-police-brutality.get-all-incidents-csv"
+              outputParameters:
+                - type: string
+                  mapping: "$."
+
+    - type: mcp
+      port: 9090
+      namespace: police-brutality-research-mcp
+      transport: http
+      description: "MCP server for AI-assisted research into 2020 police brutality incidents."
+      tools:
+        - name: get-all-incidents
+          description: >-
+            Retrieve all documented police brutality incidents from the 2020 George Floyd
+            protests. Returns location, date, description, tags, and source links for each incident.
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "2020-police-brutality.get-all-incidents"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: get-incidents-v2
+          description: >-
+            Retrieve all police brutality incidents in the v2 data format with
+            improved schema consistency.
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "2020-police-brutality.get-all-incidents-v2"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: export-incidents-csv
+          description: >-
+            Export all documented police brutality incidents as CSV for use in
+            spreadsheets, databases, and data analysis tools.
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "2020-police-brutality.get-all-incidents-csv"
+          outputParameters:
+            - type: string
+              mapping: "$."

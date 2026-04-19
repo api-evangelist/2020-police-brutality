@@ -1,0 +1,20 @@
+{
+  "id": "nm-albuquerque-1",
+  "name": "Student journalist struck by foam bullet",
+  "description": "A student journalist was struck by a foam bullet while covering protests near downtown.",
+  "date": "2020-06-01",
+  "date_text": "June 1st",
+  "state": "NM",
+  "city": "Albuquerque",
+  "geolocation": "35.0844,-106.6504",
+  "tags": [
+    "foam-bullet",
+    "journalist",
+    "protester"
+  ],
+  "links": [
+    "https://example.com/news-article",
+    "https://twitter.com/example/status/123456"
+  ],
+  "edit_at": "https://github.com/2020PB/police-brutality/edit/main/reports/New%20Mexico.md"
+}
