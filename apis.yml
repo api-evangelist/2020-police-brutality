@@ -38,7 +38,7 @@ apis:
       - url: json-schema/2020-police-brutality-incident-collection-schema.json
         type: JSONSchema
       - url: json-ld/2020-police-brutality-context.jsonld
-        type: JSON-LD
+        type: JSONLD
     description: >-
       This repository accumulates and contextualizes evidence of police
       brutality during the 2020 George Floyd protests. Data is available as
