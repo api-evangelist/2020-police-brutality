@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "2020 Police Brutality API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Incidents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "2020 Police Brutality Get All Incidents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://raw.githubusercontent.com/2020PB/police-brutality/data_build/all-locations.json"
+          },
+          "docs": "Retrieve all documented police brutality incidents from the 2020 George Floyd protests. Returns a JSON object containing metadata and an array of incident records with location, date, description, tags, and source links."
+        },
+        {
+          "info": {
+            "name": "2020 Police Brutality Get All Incidents V2",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://raw.githubusercontent.com/2020PB/police-brutality/data_build/all-locations-v2.json"
+          },
+          "docs": "Retrieve all documented police brutality incidents in version 2 format. Provides the same incident data as v1 with an updated schema structure for improved data consistency and additional fields."
+        },
+        {
+          "info": {
+            "name": "2020 Police Brutality Get All Incidents as CSV",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://raw.githubusercontent.com/2020PB/police-brutality/data_build/all-locations.csv"
+          },
+          "docs": "Retrieve all documented police brutality incidents in CSV format. Provides tabular data suitable for spreadsheet analysis and data import."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
