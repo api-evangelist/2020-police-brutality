@@ -1,6 +1,18 @@
+# 2020-police-brutality — Spectral ruleset (strengthened)
+# Plain Spectral. Existing hand-authored rules preserved; measured rules added
+# from this provider's own OpenAPI conventions by strengthen_ruleset.py,
+# then self-validated against the spec.
+#
+# Provenance:
+#   - servers-https-only: 100% of servers already https (error)
+#   - servers-expected-domain: 1/1 servers on githubusercontent.com
+#   - operationid-casing: camel @ 100% (n=3)
+#   - schema-properties-casing: snake @ 100% (n=15)
+#   - merge: kept 19 existing, added 4 measured, upgraded 0
+#   - added: servers-https-only, servers-expected-domain, operationid-casing, schema-properties-casing
+extends:
+  - spectral:oas
 rules:
-
-  # INFO / METADATA
   info-title-required:
     description: API info title must be present.
     severity: error
@@ -8,7 +20,6 @@ rules:
     then:
       field: title
       function: truthy
-
   info-description-required:
     description: API info description must be present and meaningful.
     severity: warn
@@ -16,7 +27,6 @@ rules:
     then:
       field: description
       function: truthy
-
   info-version-required:
     description: API version must be defined.
     severity: error
@@ -24,7 +34,6 @@ rules:
     then:
       field: version
       function: truthy
-
   info-license-required:
     description: Open data APIs should include a license.
     severity: warn
@@ -32,8 +41,6 @@ rules:
     then:
       field: license
       function: truthy
-
-  # OPENAPI VERSION
   openapi-version-3:
     description: Must use OpenAPI 3.0.x.
     severity: error
@@ -42,9 +49,7 @@ rules:
       field: openapi
       function: pattern
       functionOptions:
-        match: "^3\\.0\\."
-
-  # SERVERS
+        match: ^3\.0\.
   servers-must-be-defined:
     description: Servers array must be defined.
     severity: error
@@ -52,7 +57,6 @@ rules:
     then:
       field: servers
       function: truthy
-
   servers-description-required:
     description: Each server should have a description.
     severity: warn
@@ -60,8 +64,6 @@ rules:
     then:
       field: description
       function: truthy
-
-  # OPERATIONS
   operation-summary-required:
     description: Every operation must have a summary.
     severity: error
@@ -69,7 +71,6 @@ rules:
     then:
       field: summary
       function: truthy
-
   operation-description-required:
     description: Every operation should have a description.
     severity: warn
@@ -77,7 +78,6 @@ rules:
     then:
       field: description
       function: truthy
-
   operation-operationid-required:
     description: Every operation must have an operationId.
     severity: error
@@ -85,7 +85,6 @@ rules:
     then:
       field: operationId
       function: truthy
-
   operation-tags-required:
     description: Every operation must have at least one tag.
     severity: error
@@ -93,8 +92,6 @@ rules:
     then:
       field: tags
       function: truthy
-
-  # RESPONSES
   response-success-required:
     description: Every operation must define at least one 2xx response.
     severity: error
@@ -105,7 +102,6 @@ rules:
         schema:
           type: object
           minProperties: 1
-
   response-description-required:
     description: Every response must have a description.
     severity: error
@@ -113,8 +109,6 @@ rules:
     then:
       field: description
       function: truthy
-
-  # SCHEMAS
   schema-description-required:
     description: Component schemas should have descriptions.
     severity: warn
@@ -122,7 +116,6 @@ rules:
     then:
       field: description
       function: truthy
-
   schema-type-required:
     description: Schemas should define a type.
     severity: warn
@@ -130,7 +123,6 @@ rules:
     then:
       field: type
       function: truthy
-
   schema-properties-described:
     description: Schema properties should have descriptions.
     severity: info
@@ -138,8 +130,6 @@ rules:
     then:
       field: description
       function: truthy
-
-  # HTTP METHOD CONVENTIONS
   get-no-request-body:
     description: GET operations must not have a request body.
     severity: error
@@ -147,15 +137,12 @@ rules:
     then:
       field: requestBody
       function: falsy
-
-  # GENERAL QUALITY
   no-empty-descriptions:
     description: Descriptions must not be empty strings.
     severity: warn
     given: $..description
     then:
       function: truthy
-
   tags-defined:
     description: Global tags array should be defined for documentation.
     severity: info
@@ -163,3 +150,36 @@ rules:
     then:
       field: tags
       function: truthy
+  servers-https-only:
+    description: Server URLs must use HTTPS.
+    severity: error
+    given: $.servers[*].url
+    then:
+      function: pattern
+      functionOptions:
+        match: ^https://
+  servers-expected-domain:
+    description: Server URLs should be on the githubusercontent.com domain.
+    severity: warn
+    given: $.servers[*].url
+    then:
+      function: pattern
+      functionOptions:
+        match: githubusercontent\.com
+  operationid-casing:
+    description: Operation IDs should be camelCase (the dominant convention in this API).
+    severity: warn
+    given: $.paths[*][get,post,put,patch,delete].operationId
+    then:
+      function: casing
+      functionOptions:
+        type: camel
+  schema-properties-casing:
+    description: Schema properties should be snake_case (the dominant convention in this API).
+    severity: warn
+    given: $.components.schemas[*].properties
+    then:
+      field: '@key'
+      function: casing
+      functionOptions:
+        type: snake
