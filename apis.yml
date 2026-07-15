@@ -42,6 +42,8 @@ apis:
       Data is available as JSON and CSV files from the data_build branch, including geolocation, tags, dates, and source
       links for each incident.
 common:
+  - type: AgenticAccess
+    url: agentic-access/2020-police-brutality-agentic-access.yml
   - type: GitHubOrganization
     url: https://github.com/2020PB
   - type: GitHubRepository
