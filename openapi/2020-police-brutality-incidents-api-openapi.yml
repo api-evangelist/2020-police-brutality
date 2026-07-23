@@ -1,13 +1,8 @@
 openapi: 3.0.3
 info:
-  title: 2020 Police Brutality API
-  description: >-
-    This repository accumulates and contextualizes evidence of police brutality
-    during the 2020 George Floyd protests. The data is available as static JSON
-    files from the data_build branch, providing location-based incident records
-    for use by journalists, politicians, prosecutors, activists, and concerned
-    individuals. Generated from documentation.
-  version: "2.0"
+  title: 2020 Police Brutality Incidents API
+  description: This repository accumulates and contextualizes evidence of police brutality during the 2020 George Floyd protests. The data is available as static JSON files from the data_build branch, providing location-based incident records for use by journalists, politicians, prosecutors, activists, and concerned individuals. Generated from documentation.
+  version: '2.0'
   license:
     name: MIT
     url: https://github.com/2020PB/police-brutality/blob/main/LICENSE
@@ -15,22 +10,19 @@ info:
     url: https://github.com/2020PB/police-brutality
   x-generated-from: documentation
 servers:
-  - url: https://raw.githubusercontent.com/2020PB/police-brutality/data_build
-    description: GitHub raw data files (data_build branch)
+- url: https://raw.githubusercontent.com/2020PB/police-brutality/data_build
+  description: GitHub raw data files (data_build branch)
 tags:
-  - name: Incidents
-    description: Police brutality incident records from the 2020 George Floyd protests
+- name: Incidents
+  description: Police brutality incident records from the 2020 George Floyd protests
 paths:
   /all-locations.json:
     get:
       operationId: getAllIncidents
       summary: 2020 Police Brutality Get All Incidents
-      description: >-
-        Retrieve all documented police brutality incidents from the 2020 George
-        Floyd protests. Returns a JSON object containing metadata and an array
-        of incident records with location, date, description, tags, and source links.
+      description: Retrieve all documented police brutality incidents from the 2020 George Floyd protests. Returns a JSON object containing metadata and an array of incident records with location, date, description, tags, and source links.
       tags:
-        - Incidents
+      - Incidents
       responses:
         '200':
           description: Successful response with all incident records
@@ -47,34 +39,30 @@ paths:
                     help: https://github.com/2020PB/police-brutality/issues
                     updated_at: '2024-08-20T16:17:02Z'
                     data:
-                      - id: nm-albuquerque-1
-                        name: Student journalist struck by foam bullet
-                        description: A student journalist was struck by a foam bullet while covering protests.
-                        date: '2020-06-01'
-                        date_text: June 1st
-                        state: NM
-                        city: Albuquerque
-                        geolocation: "35.0844,-106.6504"
-                        tags:
-                          - foam-bullet
-                          - journalist
-                        links:
-                          - https://example.com/source
-                        edit_at: https://github.com/2020PB/police-brutality/edit/main/reports/New%20Mexico.md
+                    - id: nm-albuquerque-1
+                      name: Student journalist struck by foam bullet
+                      description: A student journalist was struck by a foam bullet while covering protests.
+                      date: '2020-06-01'
+                      date_text: June 1st
+                      state: NM
+                      city: Albuquerque
+                      geolocation: 35.0844,-106.6504
+                      tags:
+                      - foam-bullet
+                      - journalist
+                      links:
+                      - https://example.com/source
+                      edit_at: https://github.com/2020PB/police-brutality/edit/main/reports/New%20Mexico.md
       x-microcks-operation:
         delay: 0
         dispatcher: FALLBACK
-
   /all-locations-v2.json:
     get:
       operationId: getAllIncidentsV2
       summary: 2020 Police Brutality Get All Incidents V2
-      description: >-
-        Retrieve all documented police brutality incidents in version 2 format.
-        Provides the same incident data as v1 with an updated schema structure
-        for improved data consistency and additional fields.
+      description: Retrieve all documented police brutality incidents in version 2 format. Provides the same incident data as v1 with an updated schema structure for improved data consistency and additional fields.
       tags:
-        - Incidents
+      - Incidents
       responses:
         '200':
           description: Successful response with all incident records in v2 format
@@ -91,33 +79,30 @@ paths:
                     help: https://github.com/2020PB/police-brutality/issues
                     updated_at: '2024-08-20T16:17:02Z'
                     data:
-                      - id: nm-albuquerque-1
-                        name: Student journalist struck by foam bullet
-                        description: A student journalist was struck by a foam bullet while covering protests.
-                        date: '2020-06-01'
-                        date_text: June 1st
-                        state: NM
-                        city: Albuquerque
-                        geolocation: "35.0844,-106.6504"
-                        tags:
-                          - foam-bullet
-                          - journalist
-                        links:
-                          - https://example.com/source
-                        edit_at: https://github.com/2020PB/police-brutality/edit/main/reports/New%20Mexico.md
+                    - id: nm-albuquerque-1
+                      name: Student journalist struck by foam bullet
+                      description: A student journalist was struck by a foam bullet while covering protests.
+                      date: '2020-06-01'
+                      date_text: June 1st
+                      state: NM
+                      city: Albuquerque
+                      geolocation: 35.0844,-106.6504
+                      tags:
+                      - foam-bullet
+                      - journalist
+                      links:
+                      - https://example.com/source
+                      edit_at: https://github.com/2020PB/police-brutality/edit/main/reports/New%20Mexico.md
       x-microcks-operation:
         delay: 0
         dispatcher: FALLBACK
-
   /all-locations.csv:
     get:
       operationId: getAllIncidentsCsv
       summary: 2020 Police Brutality Get All Incidents as CSV
-      description: >-
-        Retrieve all documented police brutality incidents in CSV format.
-        Provides tabular data suitable for spreadsheet analysis and data import.
+      description: Retrieve all documented police brutality incidents in CSV format. Provides tabular data suitable for spreadsheet analysis and data import.
       tags:
-        - Incidents
+      - Incidents
       responses:
         '200':
           description: Successful response with all incident records in CSV format
@@ -125,11 +110,12 @@ paths:
             text/csv:
               schema:
                 type: string
-              example: "id,name,description,date,state,city,geolocation,tags\nnm-albuquerque-1,Student journalist struck by foam bullet,...,2020-06-01,NM,Albuquerque,\"35.0844,-106.6504\",foam-bullet|journalist"
+              example: 'id,name,description,date,state,city,geolocation,tags
+
+                nm-albuquerque-1,Student journalist struck by foam bullet,...,2020-06-01,NM,Albuquerque,"35.0844,-106.6504",foam-bullet|journalist'
       x-microcks-operation:
         delay: 0
         dispatcher: FALLBACK
-
 components:
   schemas:
     IncidentCollection:
@@ -156,14 +142,13 @@ components:
           description: Array of incident records
           items:
             $ref: '#/components/schemas/Incident'
-
     Incident:
       type: object
       description: A documented police brutality incident from the 2020 George Floyd protests
       properties:
         id:
           type: string
-          description: "Unique identifier for the incident (format: state-city-number)"
+          description: 'Unique identifier for the incident (format: state-city-number)'
           example: nm-albuquerque-1
         name:
           type: string
@@ -193,16 +178,16 @@ components:
         geolocation:
           type: string
           description: Latitude and longitude coordinates of the incident location
-          example: "35.0844,-106.6504"
+          example: 35.0844,-106.6504
         tags:
           type: array
           description: Categorical tags describing the type of incident or force used
           items:
             type: string
           example:
-            - foam-bullet
-            - journalist
-            - protester
+          - foam-bullet
+          - journalist
+          - protester
         links:
           type: array
           description: Source URLs documenting or referencing the incident
@@ -210,8 +195,8 @@ components:
             type: string
             format: uri
           example:
-            - https://example.com/news-article
-            - https://twitter.com/example/status/123456
+          - https://example.com/news-article
+          - https://twitter.com/example/status/123456
         edit_at:
           type: string
           format: uri
