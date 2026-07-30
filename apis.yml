@@ -2,7 +2,19 @@ aid: 2020-police-brutality
 url: https://raw.githubusercontent.com/api-evangelist/2020-police-brutality/refs/heads/main/apis.yml
 name: 2020 Police Brutality
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/2020-police-brutality.png
 tags:
   - Brutality
   - Civil Rights
@@ -17,30 +29,24 @@ created: '2024-11-13'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: 2020-police-brutality:2020-police-brutality
-    name: 2020 Police Brutality API
-    tags:
-      - Brutality
-      - Civil Rights
-      - Incidents
-      - Policing
-    humanURL: https://github.com/2020PB/police-brutality/tree/data_build
-    baseURL: https://raw.githubusercontent.com/2020PB/police-brutality/data_build
-    properties:
-      - url: https://github.com/2020PB/police-brutality/tree/data_build
-        type: Documentation
-      - url: openapi/2020-police-brutality-openapi.yml
-        type: OpenAPI
-      - url: json-schema/2020-police-brutality-incident-schema.json
-        type: JSONSchema
-      - url: json-schema/2020-police-brutality-incident-collection-schema.json
-        type: JSONSchema
-      - url: json-ld/2020-police-brutality-context.jsonld
-        type: JSONLD
-    description: >-
-      This repository accumulates and contextualizes evidence of police brutality during the 2020 George Floyd protests.
-      Data is available as JSON and CSV files from the data_build branch, including geolocation, tags, dates, and source
-      links for each incident.
+- aid: 2020-police-brutality:2020-police-brutality-incidents-api
+  name: 2020 Police Brutality Incidents API
+  description: Police brutality incident records from the 2020 George Floyd protests
+  humanURL: https://github.com/2020PB/police-brutality/tree/data_build
+  baseURL: https://raw.githubusercontent.com/2020PB/police-brutality/data_build
+  tags:
+  - Incidents
+  properties:
+  - type: OpenAPI
+    url: openapi/2020-police-brutality-incidents-api-openapi.yml
+  - type: Documentation
+    url: https://github.com/2020PB/police-brutality/tree/data_build
+  - type: JSONSchema
+    url: json-schema/2020-police-brutality-incident-schema.json
+  - type: JSONSchema
+    url: json-schema/2020-police-brutality-incident-collection-schema.json
+  - type: JSONLD
+    url: json-ld/2020-police-brutality-context.jsonld
 common:
   - type: AgenticAccess
     url: agentic-access/2020-police-brutality-agentic-access.yml
