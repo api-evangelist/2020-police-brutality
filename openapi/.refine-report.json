@@ -1,0 +1,14 @@
+{
+  "provider": "2020-police-brutality",
+  "sources": [
+    "2020-police-brutality-incidents-api-openapi.yml"
+  ],
+  "outputs": [
+    "2020-police-brutality-incidents-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
