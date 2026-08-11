@@ -48,6 +48,15 @@ apis:
   - type: JSONLD
     url: json-ld/2020-police-brutality-context.jsonld
 common:
+  - type: IssueTracker
+    url: https://github.com/2020PB/police-brutality/issues
+  - type: Releases
+    url: https://github.com/2020PB/police-brutality/releases
+  - type: ContributionGuide
+    url: https://github.com/2020PB/police-brutality/blob/main/CONTRIBUTING.md
+  - type: License
+    name: MIT
+    url: https://github.com/2020PB/police-brutality/blob/main/LICENSE
   - type: AgenticAccess
     url: agentic-access/2020-police-brutality-agentic-access.yml
   - type: GitHubOrganization
