@@ -27,7 +27,7 @@ description: >-
   officers.
 created: '2024-11-13'
 modified: '2026-05-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: 2020-police-brutality:2020-police-brutality-incidents-api
   name: 2020 Police Brutality Incidents API
