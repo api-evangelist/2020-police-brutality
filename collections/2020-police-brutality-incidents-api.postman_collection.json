@@ -1,0 +1,242 @@
+{
+  "item": [
+    {
+      "id": "eda3092f-0f04-4829-92fb-0507f3fa6ac4",
+      "name": "Incidents",
+      "description": {
+        "content": "Police brutality incident records from the 2020 George Floyd protests",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7c34b417-8fe7-41e1-b861-5fe62883ee7a",
+          "name": "2020 Police Brutality Get All Incidents",
+          "request": {
+            "name": "2020 Police Brutality Get All Incidents",
+            "description": {
+              "content": "Retrieve all documented police brutality incidents from the 2020 George Floyd protests. Returns a JSON object containing metadata and an array of incident records with location, date, description, tags, and source links.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "all-locations.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6b12f0f4-2c34-4c0e-be16-da55538601ed",
+              "name": "Successful response with all incident records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "all-locations.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"edit_at\": \"https://github.com/2020PB/police-brutality\",\n  \"help\": \"https://github.com/2020PB/police-brutality/issues\",\n  \"updated_at\": \"2024-08-20T16:17:02Z\",\n  \"data\": [\n    {\n      \"id\": \"nm-albuquerque-1\",\n      \"name\": \"Student journalist struck by foam bullet\",\n      \"description\": \"A student journalist was struck by a foam bullet while covering protests.\",\n      \"date\": \"2020-06-01\",\n      \"date_text\": \"June 1st\",\n      \"state\": \"NM\",\n      \"city\": \"Albuquerque\",\n      \"geolocation\": \"35.0844,-106.6504\",\n      \"tags\": [\n        \"foam-bullet\",\n        \"journalist\"\n      ],\n      \"links\": [\n        \"https://example.com/source\"\n      ],\n      \"edit_at\": \"https://github.com/2020PB/police-brutality/edit/main/reports/New%20Mexico.md\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "22bad406-70bd-480c-91b9-6008dd43ff1e",
+          "name": "2020 Police Brutality Get All Incidents V2",
+          "request": {
+            "name": "2020 Police Brutality Get All Incidents V2",
+            "description": {
+              "content": "Retrieve all documented police brutality incidents in version 2 format. Provides the same incident data as v1 with an updated schema structure for improved data consistency and additional fields.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "all-locations-v2.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c2a3e69d-a7bd-4554-8f11-bb36c8afeb9d",
+              "name": "Successful response with all incident records in v2 format",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "all-locations-v2.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"edit_at\": \"https://github.com/2020PB/police-brutality\",\n  \"help\": \"https://github.com/2020PB/police-brutality/issues\",\n  \"updated_at\": \"2024-08-20T16:17:02Z\",\n  \"data\": [\n    {\n      \"id\": \"nm-albuquerque-1\",\n      \"name\": \"Student journalist struck by foam bullet\",\n      \"description\": \"A student journalist was struck by a foam bullet while covering protests.\",\n      \"date\": \"2020-06-01\",\n      \"date_text\": \"June 1st\",\n      \"state\": \"NM\",\n      \"city\": \"Albuquerque\",\n      \"geolocation\": \"35.0844,-106.6504\",\n      \"tags\": [\n        \"foam-bullet\",\n        \"journalist\"\n      ],\n      \"links\": [\n        \"https://example.com/source\"\n      ],\n      \"edit_at\": \"https://github.com/2020PB/police-brutality/edit/main/reports/New%20Mexico.md\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f22b93ff-9abe-4882-8076-bd86a58667f7",
+          "name": "2020 Police Brutality Get All Incidents as CSV",
+          "request": {
+            "name": "2020 Police Brutality Get All Incidents as CSV",
+            "description": {
+              "content": "Retrieve all documented police brutality incidents in CSV format. Provides tabular data suitable for spreadsheet analysis and data import.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "all-locations.csv"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/csv"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9b52641b-3a57-4605-b74a-d7778ae517d0",
+              "name": "Successful response with all incident records in CSV format",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "all-locations.csv"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/csv"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/csv"
+                }
+              ],
+              "body": "id,name,description,date,state,city,geolocation,tags\nnm-albuquerque-1,Student journalist struck by foam bullet,...,2020-06-01,NM,Albuquerque,\"35.0844,-106.6504\",foam-bullet|journalist",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://raw.githubusercontent.com/2020PB/police-brutality/data_build",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "16ac091d-2e59-4aaa-b83d-11331b20ffb4",
+    "name": "2020 Police Brutality Incidents API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This repository accumulates and contextualizes evidence of police brutality during the 2020 George Floyd protests. The data is available as static JSON files from the data_build branch, providing location-based incident records for use by journalists, politicians, prosecutors, activists, and concerned individuals. Generated from documentation.",
+      "type": "text/plain"
+    }
+  }
+}
