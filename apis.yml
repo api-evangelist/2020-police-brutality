@@ -2,6 +2,19 @@ aid: 2020-police-brutality
 url: https://raw.githubusercontent.com/api-evangelist/2020-police-brutality/refs/heads/main/apis.yml
 name: 2020 Police Brutality
 type: Index
+deliveryModel:
+  model: self-hosted
+  license: MIT
+  open_source: true
+  commercial: false
+  callable_host: true
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
