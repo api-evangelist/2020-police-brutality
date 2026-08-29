@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
   title: 2020 Police Brutality Incidents API
   description: This repository accumulates and contextualizes evidence of police brutality during the 2020 George Floyd protests. The data is available as static JSON files from the data_build branch, providing location-based incident records for use by journalists, politicians, prosecutors, activists, and concerned individuals. Generated from documentation.
