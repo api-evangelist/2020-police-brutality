@@ -61,6 +61,12 @@ apis:
   - type: JSONLD
     url: json-ld/2020-police-brutality-context.jsonld
 common:
+  - type: Plans
+    url: plans/2020-police-brutality-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/2020-police-brutality-rate-limits.yml
+  - type: FinOps
+    url: finops/2020-police-brutality-finops.yml
   - type: IssueTracker
     url: https://github.com/2020PB/police-brutality/issues
   - type: Releases
