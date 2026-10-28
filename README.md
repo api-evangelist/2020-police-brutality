@@ -1,4 +1,4 @@
-# 2020 Police Brutality (2020-police-brutality)
+# 2020 Police Brutality
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,61 +66,112 @@
 
 This repository accumulates and contextualizes evidence of police brutality during the 2020 George Floyd protests. The goal is to assist journalists, politicians, prosecutors, activists and concerned individuals who can use the evidence accumulated here for political campaigns, news reporting, public education and prosecution of criminal police officers.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/2020-police-brutality/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/2020-police-brutality/refs/heads/main/apis.yml)
+**Areas:** Brutality · Civil Rights · Policing · Public Data
 
-## Scope
+## 2020 Police Brutality on APIs.io
 
-- **Type:** Index
+Everything profiled for 2020 Police Brutality is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/2020-police-brutality/](https://apis.io/providers/2020-police-brutality/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Brutality
-- Civil Rights
-- Policing
-- Public Data
+- [2020 Police Brutality Incidents API](https://apis.io/apis/2020-police-brutality/2020-police-brutality-incidents-api/) — Police brutality incident records from the 2020 George Floyd protests
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-11-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### 2020 Police Brutality API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-This repository accumulates and contextualizes evidence of police brutality during the 2020 George Floyd protests. Data is available as JSON and CSV files from the data_build branch, including geolocation, tags, dates, and source links for each incident.
+- [2020 Police Brutality Agentic Access](https://apis.io/agentic-access/2020-police-brutality/2020-police-brutality-agentic-access/)
 
-- **Human URL:** [https://github.com/2020PB/police-brutality/tree/data_build](https://github.com/2020PB/police-brutality/tree/data_build)
-- **Base URL:** `https://raw.githubusercontent.com/2020PB/police-brutality/data_build`
+#### JSON Schema (2)
 
-#### Tags
+The data models the API reads and writes.
 
-- Brutality
-- Civil Rights
-- Incidents
-- Policing
+- [Incident](https://apis.io/schemas/2020-police-brutality/2020-police-brutality-incident/)
+- [IncidentCollection](https://apis.io/schemas/2020-police-brutality/2020-police-brutality-incident-collection/)
 
-#### Properties
+#### JSON Structure (2)
 
-- [Documentation](https://github.com/2020PB/police-brutality/tree/data_build)
-- [OpenAPI](openapi/2020-police-brutality-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/2020-police-brutality.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/2020-police-brutality.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/2020-police-brutality-incident-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/2020-police-brutality-incident-collection-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/2020-police-brutality-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+Data models expressed in JSON Structure.
 
-## Common Properties
+- [2020 Police Brutality Incident Collection Structure](https://apis.io/json-structure/2020-police-brutality/2020-police-brutality-incident-collection-structure/)
+- [2020 Police Brutality Incident Structure](https://apis.io/json-structure/2020-police-brutality/2020-police-brutality-incident-structure/)
 
-- [GitHub Organization](https://github.com/2020PB)
-- [GitHub Repository](https://github.com/2020PB/police-brutality)
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [2020 Police Brutality Context](https://apis.io/jsonld/2020-police-brutality/2020-police-brutality-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [2020 Police Brutality Vocabulary](https://apis.io/vocabularies/2020-police-brutality/2020-police-brutality-vocabulary/)
+
+#### Examples (2)
+
+Example requests and responses.
+
+- [2020 Police Brutality Incident Collection Example](https://apis.io/examples/2020-police-brutality/2020-police-brutality-incident-collection-example/)
+- [2020 Police Brutality Incident Example](https://apis.io/examples/2020-police-brutality/2020-police-brutality-incident-example/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [2020 Police Brutality API](https://apis.io/collections/2020-police-brutality/open-2020-police-brutality/)
+- [2020 Police Brutality Incidents API](https://apis.io/collections/2020-police-brutality/open-2020-police-brutality-incidents-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [2020 Police Brutality — jsonschema rules](https://apis.io/rules/2020-police-brutality/2020-police-brutality-jsonschema-spectral-rules/)
+- [2020 Police Brutality API Rules](https://apis.io/rules/2020-police-brutality/2020-police-brutality-spectral-rules/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [2020 Police Brutality Plans Pricing](https://apis.io/plans/2020-police-brutality/2020-police-brutality-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [2020 Police Brutality Rate Limits](https://apis.io/rate-limits/2020-police-brutality/2020-police-brutality-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [2020 Police Brutality Finops](https://apis.io/finops/2020-police-brutality/2020-police-brutality-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Documentation](https://github.com/2020PB/police-brutality/blob/main/README.md)
-- [Spectral Rules](rules/2020-police-brutality-spectral-rules.yml)
-- [Vocabulary](vocabulary/2020-police-brutality-vocabulary.yaml)
-- [Features](undefined)
-- [Use Cases](undefined)
+- [GitHub](https://github.com/2020PB)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
+
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for 2020 Police Brutality: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/2020-police-brutality/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
