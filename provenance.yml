@@ -5,6 +5,12 @@ artifacts:
   agentic-access/2020-police-brutality-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
   collections/2020-police-brutality-incidents-api.opencollection.json:
     method: derived
     evidence: openapi/2020-police-brutality-incidents-api
@@ -17,6 +23,9 @@ artifacts:
   collections/2020-police-brutality.postman_collection.json:
     method: derived
     evidence: openapi/2020-police-brutality
+  data-license/2020-police-brutality-data-license.yml:
+    method: harvested
+    evidence: declared in the artifact
   examples/2020-police-brutality-incident-collection-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -27,6 +36,12 @@ artifacts:
     method: generated
     evidence: declared in the artifact
   heartbeat/2026-11-02.yml:
+    method: unknown
+    evidence: no authorship recorded
+  heartbeat/2026-11-06.yml:
+    method: unknown
+    evidence: no authorship recorded
+  heartbeat/2026-11-13.yml:
     method: unknown
     evidence: no authorship recorded
   integrations/2020-police-brutality-integration-edges.yml:
@@ -53,7 +68,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -120,6 +135,9 @@ artifacts:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-11-02T082323.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   openapi/2020-police-brutality-incidents-api-openapi.yml:
